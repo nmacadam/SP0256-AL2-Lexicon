@@ -23,17 +23,21 @@ int main() {
 
 
 	for (int i = 0; i < wordList.size(); i++) {
-		cout << "Searching dictionary for " << wordList[i] << "..." << endl;
+		cout << "Searching dictionary for \"" << wordList[i] << "\"" << "..." << endl;
 		lex.findInDict(dict, wordList[i], cmuPhones);
 	}
 	
 	dict.close();
-
+	cout << endl << endl;
+	cout << "cmuPhones:" << endl;
 	for (int i = 0; i < cmuPhones.size(); i++) cout << cmuPhones[i] << " ";
 
 	SP0Phones = lex.convertPhones(cmuPhones);
-	cout << endl;
+	cout << endl << endl;
+	cout << "SP0Phones:" << endl;
 	for (int i = 0; i < SP0Phones.size(); i++) cout << SP0Phones[i] << " ";
+
+	cout << endl << endl;
 
 	ofstream out;
 	out.open("./output/speech/speech.ino");

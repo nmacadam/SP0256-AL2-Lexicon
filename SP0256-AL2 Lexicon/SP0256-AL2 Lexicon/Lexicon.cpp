@@ -1,5 +1,4 @@
 #include "Lexicon.h"
-//#include "include/SpeechChip.h"
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -39,7 +38,7 @@ void Lexicon::findInDict(ifstream & stream, string token, vector<string> &phoneL
 	while (getline(stream, line)) {
 		if (line.find(token) != string::npos) {
 			if (token.compare(line.substr(0, token.length())) == 0) {
-				cout << lineNum << " " << line << endl;
+				cout << "(line #" << lineNum << ")" << "\t" << line << endl;
 				instances++;
 
 				newPhones = splitInput(line.substr(token.length() + 1, line.length()), ' ');
@@ -64,7 +63,7 @@ void Lexicon::findAllInDict(ifstream & stream, string token) {
 	int instances = 0;
 	while (getline(stream, line)) {
 		if (line.find(token) != string::npos) {
-			cout << lineNum << " " << line << endl;
+			cout << "(line #" << lineNum << ")" << "\t" << line << endl;
 			instances++;
 		}
 		lineNum++;
@@ -150,4 +149,5 @@ void Lexicon::generateCode(ofstream & stream, vector<string> &pList) {
 		stream << "\tSpeechChip." << pList[i] << "();\n";
 	}
 	stream << "\tdelay(1024);\n}";
+	cout << "file successfully generated!" << endl;
 }
