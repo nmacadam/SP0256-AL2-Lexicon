@@ -1,5 +1,9 @@
-﻿  Source.cpp
-d:\nathan\desktop\projects\music projects\synthwork\nathan synth diy\text-to-speech project\sp0256-al2 lexicon\sp0256-al2 lexicon\sp0256-al2 lexicon\source.cpp(25): warning C4018: '<': signed/unsigned mismatch
-d:\nathan\desktop\projects\music projects\synthwork\nathan synth diy\text-to-speech project\sp0256-al2 lexicon\sp0256-al2 lexicon\sp0256-al2 lexicon\source.cpp(33): warning C4018: '<': signed/unsigned mismatch
-d:\nathan\desktop\projects\music projects\synthwork\nathan synth diy\text-to-speech project\sp0256-al2 lexicon\sp0256-al2 lexicon\sp0256-al2 lexicon\source.cpp(38): warning C4018: '<': signed/unsigned mismatch
+﻿  Lexicon.cpp
+d:\nathan\desktop\projects\music projects\synthwork\nathan synth diy\text-to-speech project\sp0256-al2 lexicon\sp0256-al2 lexicon\sp0256-al2 lexicon\lexicon.cpp(77): warning C4018: '<': signed/unsigned mismatch
+d:\nathan\desktop\projects\music projects\synthwork\nathan synth diy\text-to-speech project\sp0256-al2 lexicon\sp0256-al2 lexicon\sp0256-al2 lexicon\lexicon.cpp(147): warning C4018: '<': signed/unsigned mismatch
+  Source.cpp
+d:\nathan\desktop\projects\music projects\synthwork\nathan synth diy\text-to-speech project\sp0256-al2 lexicon\sp0256-al2 lexicon\sp0256-al2 lexicon\source.cpp(56): warning C4018: '<': signed/unsigned mismatch
+d:\nathan\desktop\projects\music projects\synthwork\nathan synth diy\text-to-speech project\sp0256-al2 lexicon\sp0256-al2 lexicon\sp0256-al2 lexicon\source.cpp(64): warning C4018: '<': signed/unsigned mismatch
+d:\nathan\desktop\projects\music projects\synthwork\nathan synth diy\text-to-speech project\sp0256-al2 lexicon\sp0256-al2 lexicon\sp0256-al2 lexicon\source.cpp(69): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   SP0256-AL2 Lexicon.vcxproj -> D:\Nathan\Desktop\Projects\Music Projects\synthwork\Nathan Synth DIY\Text-to-Speech Project\SP0256-AL2 Lexicon\SP0256-AL2 Lexicon\Debug\SP0256-AL2 Lexicon.exe

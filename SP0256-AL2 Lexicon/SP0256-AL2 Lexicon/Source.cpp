@@ -1,25 +1,56 @@
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <locale>
 #include <vector>
 #include "Lexicon.h"
 
 using namespace std;
 
-
 int main() {
 	Lexicon lex;
 	string input;
+	string line;
+	locale loc;
 	vector<string> wordList;
 	vector<string> cmuPhones;
 	vector<string> SP0Phones;
+	int select = -1;
 
-	cout << "Enter a string to convert: ";
-	getline(cin, input);
+	cout << "Select an option:\n1) Convert from string\n2) Convert from file\n";
+	while (select != 1 && select != 2) cin >> select;
+	cout << endl;
+	cin.ignore();
+
+	if (select == 1) {
+		cout << "Enter a string to convert: ";
+		getline(cin, input);
+	}
+	if (select == 2) {
+		ifstream docInput;
+		docInput.open("./input.txt");
+		if (docInput.is_open())
+		{
+			while (getline(docInput, line))
+			{
+				input.append(line);
+			}
+			docInput.close();
+		}
+		else cout << "Unable to open file";
+
+		cout << "Input: " << input << endl;
+	}
+
+	for (std::string::size_type i = 0; i < input.length(); ++i) {
+		input[i] = std::tolower(input[i], loc);
+	}
 
 	wordList = lex.splitInput(input, ' ');
 
 	ifstream dict;
 	dict.open("./cmudict/cmudict.dict");
+	if (!dict.is_open()) cout << "Unable to open dictionary file";
 
 
 	for (int i = 0; i < wordList.size(); i++) {

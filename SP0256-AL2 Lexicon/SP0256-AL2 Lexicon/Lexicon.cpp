@@ -149,5 +149,5 @@ void Lexicon::generateCode(ofstream & stream, vector<string> &pList) {
 		stream << "\tSpeechChip." << pList[i] << "();\n";
 	}
 	stream << "\tdelay(1024);\n}";
-	cout << "file successfully generated!" << endl;
+	cout << "File successfully generated!" << endl;
 }
