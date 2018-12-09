@@ -11,6 +11,7 @@ int main() {
 	string input;
 	vector<string> wordList;
 	vector<string> cmuPhones;
+	vector<string> SP0Phones;
 
 	cout << "Enter a string to convert: ";
 	getline(cin, input);
@@ -30,6 +31,14 @@ int main() {
 
 	for (int i = 0; i < cmuPhones.size(); i++) cout << cmuPhones[i] << " ";
 
+	SP0Phones = lex.convertPhones(cmuPhones);
+	cout << endl;
+	for (int i = 0; i < SP0Phones.size(); i++) cout << SP0Phones[i] << " ";
+
+	ofstream out;
+	out.open("./output/speech/speech.ino");
+	lex.generateCode(out, SP0Phones);
+	out.close();
 
 	system("pause");
 	return 0;
