@@ -1,1 +1,1 @@
-Modify the contents of the input text file to translate from text file in the program.  The output program is placed in output/speech/speech.ino
+Modify the contents of the input text file to translate from text file in the program.  The output program is placed in output/speech/speech.ino.  Currently the output program is just a loop of the translated allophones but that could be changed pretty easily in the Lexicon class function for output.
