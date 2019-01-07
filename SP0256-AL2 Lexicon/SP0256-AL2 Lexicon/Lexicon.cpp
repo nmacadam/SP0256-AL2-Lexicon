@@ -71,6 +71,8 @@ void Lexicon::findAllInDict(ifstream & stream, string token) {
 	if (!instances) cout << token << " not found" << endl;
 }
 
+//Convert allophones from CMUdictionary to those compatible with the SPO256A
+//Note: this isn't entirely perfect, since some allophones are incompatible
 vector<string> Lexicon::convertPhones(vector<string> &pList) {
 	vector<string> newPhones;
 	newPhones.resize(pList.size());
@@ -142,11 +144,13 @@ vector<string> Lexicon::convertPhones(vector<string> &pList) {
 	return newPhones;
 }
 
+//Generates code for the arduino
 void Lexicon::generateCode(ofstream & stream, vector<string> &pList) {
 	stream << "#include <SpeechChip.h>\nSpeechChip SpeechChip(8);\n\nvoid setup(){}\n\nvoid loop() {\n";
-	for (int i = 0; i < pList.size(); i++)
+	//for (int i = 0; i < pList.size(); i++)
+	for (auto phone : pList)
 	{
-		stream << "\tSpeechChip." << pList[i] << "();\n";
+		stream << "\tSpeechChip." << phone << "();\n";
 	}
 	stream << "\tdelay(1024);\n}";
 	cout << "File successfully generated!" << endl;
